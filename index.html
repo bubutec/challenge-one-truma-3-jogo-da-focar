@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Jogo da Forca</title>
+        <meta charset="utf-8" lang="ptbr">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div id="mensagem" onclick="pgstart()" class="mensagem">
+            <div class="cel">
+                <div id="alerta">Alerta!</div>
+            </div>
+        </div>
+
+        <div id="start" style="">
+            <div>
+                <div>JOGO DA FORCA</div>
+                <button onclick="pggame();">JOGAR</button><br>
+                <button onclick="pgadd();">ADICONAR NOVAS LAVRAS</button>
+            </div>
+        </div>
+
+        <div id="add" style="display: none;">
+            <div>
+                <div>JOGO DA FORCA</div>
+                <div style="font-size:2.5vw; font-weight: normal;">ADICONAR PALAVRA</div>
+                <input type="text" id="palavra" placeholder="digite a palavra nova aqui"><br>
+                <input type="text" id="dicaPalavra" placeholder="digite a dica da palavra aqui"><br>
+                <button onclick="add();">ADICONAR</button><br>
+                <button onclick="pggame()">JOGAR</button>
+                <div id="men" style="font-size: 1vw; color:grey; margin-top: 10px;"></div>
+                
+            </div>
+        </div>
+
+        <main id="game" style="display: none;">
+            <section class="top">
+                <div class="imgs">
+                    <img id="b0" style="display: block;" src="img/base.png">
+                    <img id="i1" src="img/01.png">
+                    <img id="i2" src="img/02.png">
+                    <img id="i3" src="img/03.png">
+                    <img id="i4" src="img/04.png">
+                    <img id="i5" src="img/05.png">
+                    <img id="i6" src="img/06.png">
+                </div>
+            </section>
+            <section class="botoes">
+                <div id="dicas" class="dicas"></div>
+            </section>
+            <section class="botton">
+                <div id="saida"></div><br>
+            </section>
+            <section class="botoes">
+                <div class="letras" id="letras"></div>
+            </section>
+        </main>
+
+    </body>
+    <script src="script.js"></script>
+</html>
